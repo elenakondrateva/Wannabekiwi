@@ -41,10 +41,21 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-    	//TODO: order by date
+    	$filter = 'favourite';
+    	
+    	$where = array('is_favourite=?' => '1');
+    	$order_by = 'date ASC';
+    	
+    	$request = $this->getRequest();
+    	if (isset($request->all)) {
+    		$where = array();
+    		$filter = 'all';
+    	}
+    	
         $mapper = new Application_Model_PostsMapper();
-        $posts = $mapper->fetchAll();
+        $posts = $mapper->fetchAll($where, $order_by);
         $this->view->posts = $posts;
+        $this->view->filter = $filter;
     }
 
     /**

@@ -1,10 +1,10 @@
 <div class="filter">
 	<ul>
-		<li class="active">
-			<a href="">Favourite</a>
+		<li<?php echo ($this->filter=='favourite' ? ' class="active"' : '') ?>>
+			<a href="<?php echo $this->url(array('controller'=>'index', 'action'=> 'index'), 'default', true) ?>">Favourite</a>
 		</li>
-		<li>
-			<a href="">All</a>
+		<li<?php echo ($this->filter=='all' ? ' class="active"' : '') ?>>
+			<a href="<?php echo $this->url(array('controller'=>'index', 'action'=> 'index', 'all' => 1), 'default', true) ?>">All</a>
 		</li>
 	</ul>
 	<div class="clear"></div>
