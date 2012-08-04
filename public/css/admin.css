@@ -86,24 +86,6 @@ form input {
   width:auto;
 }
 
-/* forms in the fancybox modal window */
-.edit_user {
-  width:500px;
-}
-.edit_user .zend_form dt {
-  clear:both;
-  width: 160px;
-  padding:0 10px;
-  float:left;
-  margin:0;
-}
-.edit_user .zend_form dd {
-  margin-bottom:10px;
-}
-.edit_user #submit-element {
-  margin:20px 0 0 0;
-}
-
 
 #wrapper {
   width: 960px;
@@ -190,44 +172,15 @@ form input {
 	padding:10px 0;
 }
 
-#fancybox-inner h1 {
-  color:#303942;
-  font-size: 22px;
-  font-weight:normal;
-  border-bottom: 1px solid #eee;
-  padding:10px 0;
-  margin:0;
+/* posts */
+.list td.date {
+	width:140px;
 }
-#fancybox-inner h2 {
-  font-size: 18px;
+.posts td.options {
+	width:120px;
+	padding: 5px;
 }
 
-.edit_user .zend_form input {
-  width: 300px;
-}
-.edit_user .zend_form textarea {
-  width: 300px;
-  height:90px;
-}
-
-/* users */
-.users table td.options {
-  width:210px;
-  padding:5px;
-  text-align:center;
-}
-.users table td.options a.button {
-  margin-right:6px;
-}
-
-.edit_user form input.balance {
-  width:180px;
-  float:left;
-  margin-right:8px;
-}
-#balance-element p {
-  margin: 0;
-}
 
 .search {
   padding:10px 0;

@@ -25,10 +25,13 @@
         </controllerFile>
         <controllerFile controllerName="Admin">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="postedit"/>
+          <actionMethod actionName="postdelete"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Login"/>
+        <formFile formName="Post"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -75,6 +78,12 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Admin">
             <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="postedit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="postdelete"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

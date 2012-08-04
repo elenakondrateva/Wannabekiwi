@@ -4,17 +4,17 @@
       <a class="logout" href="<?php echo $this->url(array('controller'=>'auth', 'action'=>'logout'), null, true) ?>">Log out</a>
     </div>
 
-    <!--div class="menu">
+    <div class="menu">
         <ul>
-            <li<?php echo ($this->action=='posts')?' class="active"':'';?>>
-                <a href="<?php echo $this->url(array('controller'=>'admin', 'action'=> 'posts'), 'default', true) ?>">Posts</a>
+            <li<?php echo ($this->action=='index')?' class="active"':'';?>>
+                <a href="<?php echo $this->url(array('controller'=>'admin', 'action'=> 'index'), 'default', true) ?>">Posts</a>
             </li>
             <li<?php echo ($this->action=='links')?' class="active"':'';?>>
-                <a href="<?php echo $this->url(array('controller'=>'admin', 'action'=> 'links'), 'default', true) ?>">Links</a>
+                <a href="<?php echo $this->url(array('controller'=>'admin', 'action'=> 'index'), 'default', true) ?>">Links</a>
             </li>
             <li<?php echo ($this->action=='users')?' class="active"':'';?>>
-                <a href="<?php echo $this->url(array('controller'=>'admin', 'action'=> 'users'), 'default', true) ?>">Users</a>
+                <a href="<?php echo $this->url(array('controller'=>'admin', 'action'=> 'index'), 'default', true) ?>">Users</a>
             </li>
         </ul>
-    </div-->
+    </div>
 </div>

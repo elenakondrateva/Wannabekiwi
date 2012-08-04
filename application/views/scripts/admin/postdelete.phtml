@@ -1,0 +1,10 @@
+<h1>Delete post</h1>
+
+<p>Delete post &laquo;<?php echo html_entity_decode($this->post->title) ?>&raquo;?</p>
+
+<form action="" method="POST">
+	<input type="hidden" name="delete" value="1" />
+	<input type="submit" value="Yes" />
+</form>
+
+<p><a href="<?php echo $this->url(array('controller'=>'index', 'action'=> $action), 'default', true) ?>">Return to posts</a></p>
