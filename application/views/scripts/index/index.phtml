@@ -13,29 +13,31 @@
 <div class="posts">
     <?php foreach ($this->posts as $post): ?>
     <div class="post">
-    
-        <h2><a href="<?php echo $post->link ?>"><?php echo $this->escape($post->title) ?></a></h2>
         
         <?php if ($post->is_favourite == 1): ?>
         <div class="favourite"></div>
         <?php endif ?>
+    
+        <h2><a href="<?php echo $post->link ?>" title="Read the rest of the entry"><?php echo html_entity_decode($post->title) ?></a></h2>
         
-  		<div class="text"><?php echo $post->text ?></div>
+  		<div class="text"><?php echo html_entity_decode($post->text); ?></div>
   		
   		<div class="info">
   		
-  			<div class="date"><?php echo $post->date ?></div>
+  			<div class="date">At <?php echo $post->date ?></div>
   			
-	        <?php if (!empty($post->author)): ?>
-	        <div class="author"><?php echo $this->escape($post->author) ?></div>
+	        <?php if ($post->author): ?>
+	        <div class="author">by <?php echo $this->escape($post->author) ?></div>
 	        <?php endif ?>
   			
   			<div class="link">
-  				<a href="<?php echo $post->link ?>"><?php echo $post->link ?></a>
+  				from <a href="<?php echo $post->link ?>">
+  				<?php echo reset(explode("/", substr($post->link, 7))); ?>
+  				</a>
   			</div>
   			
   		</div>
-        
+       
     </div>
     <?php endforeach ?>
 </div>

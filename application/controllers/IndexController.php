@@ -41,6 +41,7 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
+    	//TODO: order by date
         $mapper = new Application_Model_PostsMapper();
         $posts = $mapper->fetchAll();
         $this->view->posts = $posts;

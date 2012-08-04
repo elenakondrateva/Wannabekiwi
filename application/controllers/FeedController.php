@@ -63,7 +63,7 @@ class FeedController extends Zend_Controller_Action
     			 
     			//filtering
     			foreach ($edata as $key => $value) {
-    				$edata[$key] = $htmlEntities->filter($value);
+    				$edata[$key] = $htmlEntities->filter(strip_tags($value));
     			}
     			 
     			//add to db

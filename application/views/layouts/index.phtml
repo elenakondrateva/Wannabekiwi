@@ -8,7 +8,9 @@
     </title>
     <?php 
         echo $this->headLink()->appendStylesheet( $this->baseUrl() . '/css/styles.css' );
-        echo $this->headScript()->appendFile( 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+        echo $this->headLink()->appendStylesheet( 'http://fonts.googleapis.com/css?family=Rancho' );
+        echo $this->headLink()->appendStylesheet( 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' );
+        echo $this->headScript()->appendFile( 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' );
         echo $this->headScript()->appendFile( $this->baseUrl() . '/js/main.js');
     ?>
 </head>
@@ -35,6 +37,9 @@
     </div>
     
     <div id="footer">
+    	<div class="copyrights">
+    		By <a href="http://kondrateva.com">Elena Kondrateva</a>
+    	</div>
         <div class="menu">
             <?php $menu = $this->bottom_menu; include APPLICATION_PATH . '/views/scripts/common/menu.phtml'; ?>
         </div>
