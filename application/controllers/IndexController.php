@@ -105,7 +105,10 @@ class IndexController extends Zend_Controller_Action
 
     public function contactAction()
     {
-        // action body
+        $form = new Application_Form_Contact();
+        $this->view->form = $form;
+        
+        //TODO: send email
     }
 
 

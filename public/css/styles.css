@@ -71,9 +71,13 @@ form input,textarea{
   font-family: Arial, Tahoma, sans-serif;
   font-size:13px;
   padding:0 3px;
+   width: 300px;
 }
 form input {
   height: 24px;
+}
+form textarea{
+  height: 120px;
 }
 .zend_form dt{
   margin-top:10px;
