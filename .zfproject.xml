@@ -24,7 +24,12 @@
           <layoutScriptFile layoutName="login"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
-      <modelsDirectory/>
+      <modelsDirectory>
+        <modelFile modelName="Posts"/>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Posts"/>
+        </dbTableDirectory>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>

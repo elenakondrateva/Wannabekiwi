@@ -5,9 +5,6 @@ class IndexController extends Zend_Controller_Action
 
     /**
      * Pages
-     *
-     *
-     *
      */
     private static $pages = array(
         'index' => array(
@@ -44,14 +41,13 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+        $mapper = new Application_Model_PostsMapper();
+        $posts = $mapper->fetchAll();
+        $this->view->posts = $posts;
     }
 
     /**
      * Initiate page layout according to input parameters
-     *
-     *
-     *
      */
     protected function initPageLayout()
     {
