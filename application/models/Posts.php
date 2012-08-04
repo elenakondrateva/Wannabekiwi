@@ -147,7 +147,7 @@ class Application_Model_Posts
 	}
 	public function getIs_favourite()
 	{
-		return $this->_is_favourite;
+		return (int) $this->_is_favourite;
 	}
 	
 	/*** validation ***/
