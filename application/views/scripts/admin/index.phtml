@@ -1,0 +1,31 @@
+<h1>Posts</h1>
+
+<div class="posts">
+    <?php if (count($this->posts)):?>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Text</th>
+            <th>Author</th>
+            <th>Link</th>
+            <th>Favourite</th>
+            <th>Options</th>
+        </tr>
+        <?php $i=0; foreach ($this->posts as $post): $i++; ?>
+        <tr class="<?php echo $i%2==0 ? 'odd' : 'even' ?>">
+            <td><?php echo $post->date ?></td>
+            <td><?php echo $post->title ?></td>
+            <td><?php echo $post->text ?></td>
+            <td><?php echo $post->author ?></td>
+            <td><?php echo $post->link ?></td>
+            <td><?php echo $post->is_favourite ? 'yes' : 'no' ?></td>
+            <td class="options">
+                <a class="button" href="<?php echo $this->url(array('controller'=>'admin', 'action'=> 'postEdit', 'post_id' => $post->id), 'default', true) ?>">Edit</a>
+                <a class="button" href="<?php echo $this->url(array('controller'=>'admin', 'action'=> 'postDelete', 'post_id' => $post->id), 'default', true) ?>">Delete</a>
+            </td>
+        </tr>
+        <?php endforeach ?>
+    </table>
+    <?php endif ?>
+</div>
