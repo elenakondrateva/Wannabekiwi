@@ -1,0 +1,7 @@
+SetEnv HTTP_APPLICATION_ENV "development"
+SetEnv APPLICATION_ENV "development"
+
+php_value include_path "/usr/share/php"
+
+RewriteEngine on
+RewriteRule ^(.*)$ /public/$1 [L]

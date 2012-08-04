@@ -1,0 +1,45 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <?php echo !empty($this->page->title) ? $this->page->title : $this->page->name ?> - 
+        <?php echo $_SERVER['HTTP_HOST'] ?>
+    </title>
+    <?php 
+        echo $this->headLink()->appendStylesheet( $this->baseUrl() . '/css/styles.css' );
+        echo $this->headScript()->appendFile( 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+        echo $this->headScript()->appendFile( $this->baseUrl() . '/js/main.js');
+    ?>
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="header">
+    	<div class="logo">
+    		<a href="/">Wannabekiwi</a>
+    	</div>
+	    <div class="menu">
+	         <?php $menu = $this->top_menu; include APPLICATION_PATH . '/views/scripts/common/menu.phtml'; ?>
+	    </div>
+    </div>
+    
+    <div id="content">
+        <?php if (!empty($this->page->header)): ?>
+        <h1><?php echo $this->page->header ?></h1>
+        <?php endif ?>
+        
+        <?php echo $this->layout()->content ?>
+        
+        <div class="clear"></div>
+    </div>
+    
+    <div id="footer">
+        <div class="menu">
+            <?php $menu = $this->bottom_menu; include APPLICATION_PATH . '/views/scripts/common/menu.phtml'; ?>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

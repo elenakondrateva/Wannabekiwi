@@ -1,0 +1,240 @@
+body {
+  color: #303942;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  margin:0;
+  padding:0;
+}
+
+a, a:link, a:visited {
+  color: #15C;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+/* tables */
+table {
+  border-collapse: collapse;
+  width:100%;
+}
+table th {
+  text-align:left;
+  background-color:#EEEEEE;
+  padding: 3px 5px;
+  font-size: 12px;
+}
+table td {
+  border: 1px solid #EEEEEE;
+  font-size: 12px;
+  padding: 2px 5px;
+  vertical-align: middle;
+}
+table tr.odd {
+  background-color:#F6F6F6;
+}
+
+/*** common classes ***/
+.clear {
+  clear:both;
+}
+
+/*** forms ***/
+button, #submit-element input, a.button {
+  background-color: #F0F0F0;
+  border-color: #a7a7a7;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  height: 24px;
+  margin-right: 1px;
+  min-height: 24px;
+  min-width: 48px;
+  padding: 1px 10px 5px 10px;
+  text-align: center;
+  text-shadow: #F0F0F0 0px 1px 0px;
+  font-size:12px;
+  cursor:pointer;
+  line-height:normal;
+}
+a.button {
+  text-decoration:none;
+  padding:3px 10px;
+}
+
+form input,textarea{
+  border: 1px solid #BFBFBF;
+  border-radius: 2px;
+  font-family: Arial, Tahoma, sans-serif;
+  font-size:13px;
+  padding:0 3px;
+}
+form input {
+  height: 24px;
+}
+.zend_form dt{
+  margin-top:10px;
+}
+.zend_form dd{
+  margin:0;
+}
+
+#submit-element input {
+  clear:both;
+  width:auto;
+}
+
+/* forms in the fancybox modal window */
+.edit_user {
+  width:500px;
+}
+.edit_user .zend_form dt {
+  clear:both;
+  width: 160px;
+  padding:0 10px;
+  float:left;
+  margin:0;
+}
+.edit_user .zend_form dd {
+  margin-bottom:10px;
+}
+.edit_user #submit-element {
+  margin:20px 0 0 0;
+}
+
+
+#wrapper {
+  width: 960px;
+  margin: auto;
+}
+
+#header .admin {
+  width: 300px;
+  float:left;
+  padding-top:12px;
+}
+#header .admin a.logout{
+  padding-left:15px;
+}
+
+/* menu */
+#header .menu {
+  float:right;
+}
+#header .menu ul {
+  list-style-type:none;
+  margin:0;
+}
+#header .menu ul li {
+  float:left;
+  padding:5px 10px;
+  border-top:7px solid #fff;
+}
+#header .menu ul li:hover, #header .menu ul li.active {
+  border-top:7px solid #4E5764;
+}
+#header .menu ul li a {
+  color: #777;
+  text-decoration:none;
+}
+#header .menu ul li a:hover, #header .menu ul li.active a {
+  color: #303942;
+}
+
+#footer .menu {
+  float:right;
+}
+#footer .menu ul {
+  list-style-type:none;
+  margin:0;
+}
+#footer .menu ul li {
+  float:left;
+  padding:5px 10px;
+}
+#footer .menu ul li a {
+  color: #777;
+  font-size:12px;
+}
+#footer .menu ul li a:hover, #footer .menu ul li.active a {
+  color: #4E5764;
+  text-decoration:none;
+}
+
+
+#content {
+  clear:both;
+  padding:20px 0;
+}
+
+#content h1 {
+  color:#303942;
+  font-size: 22px;
+  font-weight:normal;
+  border-bottom: 1px solid #eee;
+  padding:10px 0;
+}
+#content h2, #fancybox-inner h2 {
+  color:#303942;
+  font-size: 20px;
+  font-weight:normal;
+  padding:0;
+  margin:10px 0;
+}
+
+/*** footer ***/
+#footer {
+	border-top: 1px solid #EEEEEE;
+	padding:10px 0;
+}
+
+#fancybox-inner h1 {
+  color:#303942;
+  font-size: 22px;
+  font-weight:normal;
+  border-bottom: 1px solid #eee;
+  padding:10px 0;
+  margin:0;
+}
+#fancybox-inner h2 {
+  font-size: 18px;
+}
+
+.edit_user .zend_form input {
+  width: 300px;
+}
+.edit_user .zend_form textarea {
+  width: 300px;
+  height:90px;
+}
+
+/* users */
+.users table td.options {
+  width:210px;
+  padding:5px;
+  text-align:center;
+}
+.users table td.options a.button {
+  margin-right:6px;
+}
+
+.edit_user form input.balance {
+  width:180px;
+  float:left;
+  margin-right:8px;
+}
+#balance-element p {
+  margin: 0;
+}
+
+.search {
+  padding:10px 0;
+}
+
+.filter {
+  margin-bottom:20px;
+}
+
+
