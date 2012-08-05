@@ -7,7 +7,7 @@ class AdminController extends Zend_Controller_Action
     {
     	$auth = Zend_Auth::getInstance();
     	if (!$auth->hasIdentity()) {
-    		return $this->_helper->redirector('auth', 'index');
+    		return $this->_helper->redirector('index', 'auth');
     	}
     	$this->view->user = $auth->getIdentity();
     	

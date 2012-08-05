@@ -9,16 +9,54 @@ class FeedController extends Zend_Controller_Action
     }
 
     /**
-     * Docs: http://framework.zend.com/manual/en/zend.feed.reader.html
-     *
+     * Docs: http://framework.zend.com/manual/en/zend.feed.writer.html
      */
     public function indexAction()
     {
-   	
+    	$mapper = new Application_Model_PostsMapper();
+    	$posts = $mapper->fetchAll(null, 'date ASC');
+    	
+    	if (count($posts)) {
+    		/**
+    		 * Create the parent feed
+    		 */
+    		$feed = new Zend_Feed_Writer_Feed();
+    		$feed->setTitle('Wannabekiwi');
+    		$feed->setDescription('Best content about immigration and life in New Zealand in the one place');
+    		$feed->setLink('http://wannabekiwi.ru');
+    		$feed->setFeedLink('http://wannabekiwi.ru/feed', 'rss');
+    		$feed->addAuthor(array(
+    				'name'  => 'Elena Kondrateva',
+    				'email' => 'elena@kondrateva.com',
+    				'uri'   => 'http://kondrateva.com',
+    		));
+    		$feed->setDateModified(time());
+    		
+    		foreach($posts as $post) {
+    			$entry = $feed->createEntry();
+    			$entry->setTitle(html_entity_decode($post->title));
+    			$entry->setLink($post->link);
+    			$entry->addAuthor(array(
+    					'name'  => $post->author
+    			));
+    			$entry->setDateModified(time());
+    			$entry->setDateCreated(new Zend_Date($post->date, Zend_Date::ISO_8601));
+    			$entry->setDescription(html_entity_decode($post->text));
+    			$entry->setContent(html_entity_decode($post->text));
+    			$feed->addEntry($entry);
+    		}
+    		 
+    		$out = $feed->export('rss');
+    		echo $out;
+    		exit();
+    	} else {
+    		//TODO: error
+    	}
     }
 
     /**
      * Adds new post from feed
+     * Docs: http://framework.zend.com/manual/en/zend.feed.reader.html
      *
      * @param string $feed URL of RSS-feed
      *

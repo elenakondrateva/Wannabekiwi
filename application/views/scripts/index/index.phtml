@@ -6,6 +6,9 @@
 		<li<?php echo ($this->filter=='all' ? ' class="active"' : '') ?>>
 			<a href="<?php echo $this->url(array('controller'=>'index', 'action'=> 'index', 'all' => 1), 'default', true) ?>">All</a>
 		</li>
+		<li>
+			<a class="rss" href="/feed"></a>
+		</li>
 	</ul>
 	<div class="clear"></div>
 </div>
@@ -24,14 +27,14 @@
   		
   		<div class="info">
   		
-  			<div class="date">At <?php echo $post->date ?></div>
+  			<div class="date">Posted on <?php echo $post->date ?></div>
   			
 	        <?php if ($post->author): ?>
 	        <div class="author">by <?php echo $this->escape($post->author) ?></div>
 	        <?php endif ?>
   			
   			<div class="link">
-  				from <a href="<?php echo $post->link ?>">
+  				/ <a href="<?php echo $post->link ?>">
   				<?php echo reset(explode("/", substr($post->link, 7))); ?>
   				</a>
   			</div>
