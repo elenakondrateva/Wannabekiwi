@@ -31,6 +31,7 @@ class Application_Model_PostsMapper
 				'date'          => $posts->getDate(),
 				'title'			=> $posts->getTitle(),
 				'text'			=> $posts->getText(),
+				'content'		=> $posts->getContent(),
 				'author'		=> $posts->getAuthor(),
 				'link'			=> $posts->getLink(),
 				'date_added'	=> $posts->getDate_added(),
@@ -65,6 +66,7 @@ class Application_Model_PostsMapper
 		->setDate($row->date)
 		->setTitle($row->title)
 		->setText($row->text)
+		->setContent($row->content)
 		->setAuthor($row->author)
 		->setLink($row->link)
 		->setDate_added($row->date_added)

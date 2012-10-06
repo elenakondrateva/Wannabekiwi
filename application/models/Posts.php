@@ -6,6 +6,7 @@ class Application_Model_Posts
 	protected $_date;
 	protected $_title;
 	protected $_text;
+	protected $_content;
 	protected $_author;
 	protected $_link;
 	protected $_date_added;
@@ -88,6 +89,16 @@ class Application_Model_Posts
 	public function getText()
 	{
 		return $this->_text;
+	}
+	
+	public function setContent($content)
+	{
+		$this->_content = (string) $content;
+		return $this;
+	}
+	public function getContent()
+	{
+		return $this->_content;
 	}
 	
 	public function setAuthor($author)
