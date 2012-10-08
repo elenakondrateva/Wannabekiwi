@@ -16,7 +16,7 @@
         <tr class="<?php echo $i%2==0 ? 'odd' : 'even' ?>">
             <td class="date"><?php echo $post->date ?></td>
             <td><a href="<?php echo $post->link ?>"><?php echo html_entity_decode($post->title) ?></a></td>
-            <td><?php echo html_entity_decode(substr(strip_tags($post->text), 0, 150)) ?>...</td>
+            <td><?php echo substr(strip_tags(html_entity_decode($post->text)), 0, 150) ?>...</td>
             <td><?php echo $post->author ?></td>
             <td><?php echo $post->is_favourite ? 'yes' : 'no' ?></td>
             <td class="options">

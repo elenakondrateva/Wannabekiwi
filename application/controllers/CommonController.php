@@ -44,7 +44,8 @@ class CommonController extends Zend_Controller_Action
      */
     protected function initPageLayout()
     {
-    	if (isset($this->getRequest()->ajax)) {
+    	$request = $this->getRequest();
+    	if (isset($request->ajax)) {
     		$this->_helper->layout->setLayout('naked');
     	} else {
     		$this->_helper->layout->setLayout('index');
