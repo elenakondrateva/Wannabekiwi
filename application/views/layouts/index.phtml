@@ -6,6 +6,7 @@
         <?php echo !empty($this->page->title) ? $this->page->title : $this->page->name ?> - 
         <?php echo $_SERVER['HTTP_HOST'] ?>
     </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <?php 
         echo $this->headLink()->appendStylesheet( $this->baseUrl() . '/css/styles.css' );
         echo $this->headLink()->appendStylesheet( $this->baseUrl() . '/css/mediaqueries.css' );

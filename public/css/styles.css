@@ -66,7 +66,7 @@ a.button {
   padding:3px 10px;
 }
 
-form input,textarea{
+form input,textarea,select{
   border: 1px solid #BFBFBF;
   border-radius: 2px;
   font-family: Arial, Tahoma, sans-serif;
@@ -74,7 +74,7 @@ form input,textarea{
   padding:0 3px;
    width: 300px;
 }
-form input {
+form input,select {
   height: 24px;
 }
 form textarea{
