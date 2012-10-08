@@ -123,12 +123,12 @@ class Application_Model_Posts
 	
 	public function setDate_added($date)
 	{
-		$this->_date = $date;
+		$this->_date_added = $date;
 		return $this;
 	}
 	public function getDate_added()
 	{
-		return $this->_date;
+		return $this->_date_added;
 	}
 	
 	public function setResource_id($resource_id)

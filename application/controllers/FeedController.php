@@ -110,7 +110,7 @@ class FeedController extends Zend_Controller_Action
     					'title'		 => $htmlEntities->filter($title),
     					'text'		 => $htmlEntities->filter($text),
     					'content'	 => $htmlEntities->filter($entry->getContent()),
-    					'date' 		 => $entry->getDateModified(),
+    					'date' 		 => date('Y-m-d H:i:s', strtotime($entry->getDateCreated())),
     					'author'	 => $htmlEntities->filter($author),
     					'link'		 => $htmlEntities->filter($link),
     					'date_added' => date("Y-m-d H:i:s")
