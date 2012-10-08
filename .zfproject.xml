@@ -31,6 +31,12 @@
         <controllerFile controllerName="Links">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="About">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Contact">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Login"/>
@@ -90,6 +96,12 @@
             <viewScriptFile forActionName="postdelete"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Links">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="About">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Contact">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>

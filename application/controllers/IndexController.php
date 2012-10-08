@@ -10,7 +10,7 @@ class IndexController extends CommonController
     	$filter = 'favourite';
     	
     	$where = array('is_favourite=?' => '1');
-    	$order_by = 'date ASC';
+    	$order_by = 'date DESC';
     	
     	$request = $this->getRequest();
     	if (isset($request->all)) {
@@ -23,20 +23,6 @@ class IndexController extends CommonController
         $this->view->posts = $posts;
         $this->view->filter = $filter;
     }
-
-    public function aboutAction()
-    {
-        // action body
-    }
-
-    public function contactAction()
-    {
-        $form = new Application_Form_Contact();
-        $this->view->form = $form;
-        
-        //TODO: send email
-    }
-
 
 }
 

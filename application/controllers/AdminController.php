@@ -26,7 +26,7 @@ class AdminController extends Zend_Controller_Action
     	}    	
     	
         $mapper = new Application_Model_PostsMapper();
-        $posts = $mapper->fetchAll($where);
+        $posts = $mapper->fetchAll($where, 'date DESC');
         $this->view->posts = $posts;
     }
 

@@ -24,6 +24,11 @@ class Application_Form_Post extends Zend_Form
         $this->setAttrib('accept-charset', 'utf-8');
         $required_suffix = ' * ';
 
+        $this->addElement('text', 'date', array(
+        		'label'	=> 'Date created',
+        		'value' => $post->date
+        ));
+        
         $this->addElement('text', 'title', array(
             'label'	=> 'Title',
             'value' => $post->title
